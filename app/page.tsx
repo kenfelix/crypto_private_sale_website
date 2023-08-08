@@ -31,7 +31,7 @@ export default function Home() {
     setTimeout(() => {
       setLoading(false)
     }, 5000)
-  }, [])
+  })
 
   const handleSubmit = () => {buyTokens()}
   return (
