@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className='bg-[#000000]'>
       <GlobalContextProvider>
         {children}
         </GlobalContextProvider>

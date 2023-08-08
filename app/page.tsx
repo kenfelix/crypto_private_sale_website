@@ -51,7 +51,7 @@ export default function Home() {
             />
           </div>
         :
-        <div className='bg-[#000000] w-full h-full flex flex-col p-[20px] items-center gap-[40px]'>
+        <div className='w-full h-full flex flex-col p-[20px] items-center gap-[40px]'>
           {/* header */}
           <div className='flex flex-row md:px-[60px] justify-between space-x-[50px] items-center sm:space-x-[100px] lg:space-x-[350px] xl:space-x-[600px]'>
             {/* left-side */}

@@ -1,7 +1,8 @@
 "use client";
 
 import { createContext, useContext, Dispatch, SetStateAction, useState } from "react";
-import { ThirdwebProvider, ChainId } from "@thirdweb-dev/react"
+import { ThirdwebProvider} from "@thirdweb-dev/react"
+import { Binance } from "@thirdweb-dev/chains";
 
 interface ContextProps {
     amount: string,
@@ -26,7 +27,7 @@ export const GlobalContextProvider = ({ children }) => {
     const [loading, setLoading] = useState(true)
 
     return (
-        <ThirdwebProvider activeChain={ChainId.BinanceSmartChainMainnet} dAppMeta={{
+        <ThirdwebProvider activeChain={Binance} dAppMeta={{
             name: "KiwiNative",
             description: "Kiwinative is a web3 based project that focuses on enhancing peer to peer transactions and improves usability and profitability.",
             logoUrl: "https://kiwinative.pro/logo.png",
