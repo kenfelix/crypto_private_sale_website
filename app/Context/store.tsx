@@ -11,6 +11,10 @@ interface ContextProps {
     setLoading: Dispatch<SetStateAction<boolean>>
 }
 
+interface GlobalContextProviderProps {
+    children: React.ReactNode
+  }
+
 const GlobalContext = createContext<ContextProps>({
     amount: "",
     setAmount: function (value: SetStateAction<string>): void {
@@ -22,7 +26,7 @@ const GlobalContext = createContext<ContextProps>({
     }
 })
 
-export const GlobalContextProvider = ({ children }) => {
+export const GlobalContextProvider = ({ children }: GlobalContextProviderProps) => {
     const [amount, setAmount] = useState('')
     const [loading, setLoading] = useState(true)
 
