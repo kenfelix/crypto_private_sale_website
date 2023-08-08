@@ -78,7 +78,7 @@ export default function Home() {
             </div>
             <hr className='border-[#b9b9b9]'/>
             <p className='text-[12px] text-[#a2cf2f]'>NOTICE:</p>
-            <p className='text-[#b9b9b9]'>Congrats! You're selected for Krypto's private sale. Don't miss out, act now and enjoy exclusive offers!</p>
+            <p className='text-[#b9b9b9]'>Congrats! You&apos;re selected for Krypto&apos;s private sale. Don&apos;t miss out, act now and enjoy exclusive offers!</p>
             <hr className='border-[#b9b9b9]'/>
             <p className='text-[12px] text-[#a2cf2f]'>HOW TO PARTICIPATE:</p>
             <ul className='text-[#b9b9b9] list-disc'>
