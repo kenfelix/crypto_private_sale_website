@@ -11,14 +11,11 @@ import { crowdsale_details } from './contract';
 import { ethers } from 'ethers';
 import { useEffect } from 'react';
 import { DotLoader } from 'react-spinners';
-import { usePathname, useSearchParams } from 'next/navigation';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const {amount, setAmount, loading, setLoading} = useGlobalContext()
-  const pathname = usePathname()
-  const params = useSearchParams()
 
   const address = useAddress();
   const signer = useSigner();
@@ -34,7 +31,7 @@ export default function Home() {
     setTimeout(() => {
       setLoading(false)
     }, 5000)
-  }, [pathname, params, setLoading])
+  }, [])
 
   const handleSubmit = () => {buyTokens()}
   return (
