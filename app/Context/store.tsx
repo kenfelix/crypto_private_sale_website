@@ -2,7 +2,7 @@
 
 import { createContext, useContext, Dispatch, SetStateAction, useState } from "react";
 import { ThirdwebProvider} from "@thirdweb-dev/react"
-import { Binance } from "@thirdweb-dev/chains";
+import { BinanceTestnet } from "@thirdweb-dev/chains";
 
 interface ContextProps {
     amount: string,
@@ -31,12 +31,12 @@ export const GlobalContextProvider = ({ children }: GlobalContextProviderProps) 
     const [loading, setLoading] = useState(true)
 
     return (
-        <ThirdwebProvider activeChain={Binance} dAppMeta={{
+        <ThirdwebProvider activeChain={BinanceTestnet} dAppMeta={{
             name: "KiwiNative",
             description: "Kiwinative is a web3 based project that focuses on enhancing peer to peer transactions and improves usability and profitability.",
             logoUrl: "https://kiwinative.pro/logo.png",
             url: "https://kiwinative.pro",
-          }}>
+          }} clientId="d7b7f442ae5fa2d09cb73b1154f6a2d7">
         <GlobalContext.Provider value={{amount, setAmount, loading, setLoading }}>
             {children}
         </GlobalContext.Provider>

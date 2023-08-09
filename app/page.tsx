@@ -30,10 +30,13 @@ export default function Home() {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 5000)
-  })
+    }, 3000)
+  }, [setLoading])
 
-  const handleSubmit = () => {buyTokens()}
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+    buyTokens();
+  };
   return (
     <>
       {
@@ -93,6 +96,7 @@ export default function Home() {
                 <input
                   type="number"
                   placeholder='0.00 BNB'
+                  step="any"
                   required
                   onChange={e => setAmount(e.target.value)}
                   className='bg-transparent rounded-lg focus:outline-none border-[1px] p-2 border-solid border-[#6c8726]'
